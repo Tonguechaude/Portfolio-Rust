@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Add a plain CSS file: see https://trunkrs.dev/assets/#css -->
+        <!-- If using Tailwind with Leptos CSR, see https://trunkrs.dev/assets/#tailwind instead-->
+        <link
+            data-trunk
+            rel="tailwind-css"
+            href="/static/assets/tailwind.css"
+        />
+
+        <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
+        <link data-trunk rel="icon" href="/static/img/favicon.ico" />
+
+        <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
+        <link data-trunk rel="rust" data-wasm-opt="z" data-weak-refs />
+
+        <!-- Add a directory of static assets: see https://trunkrs.dev/assets/#copy-dir -->
+        <link data-trunk rel="copy-dir" href="/static/img" />
+    </head>
+
+    <body>
+        <noscript>
+            <strong
+                >Je suis désolé mais mon site ne fonctionne pas sans WASM
+                activée, veuillez activer le support pour WASM dans votre
+                navigateur</strong
+            >
+        </noscript>
+    </body>
+</html>
