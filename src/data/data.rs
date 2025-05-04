@@ -12,7 +12,7 @@ pub fn get_projects() -> Vec<Project> {
         Project {
             title: "Cube.rs",
             description: "Juste un cube qui tourne en Rust",
-            tags: &["Rust", "Make", "Cargo"],
+            tags: &["Rust", "Cargo"],
             image: "/img/cuberust.png",
             link: "https://github.com/Tonguechaude/cube.rs",
         },
@@ -26,9 +26,9 @@ pub fn get_projects() -> Vec<Project> {
         Project {
             title: "Portfolio Tonguechaude",
             description: "Un site perso pour montrer mes projets",
-            tags: &["Rust", "Tailwind", "Leptos", "WASM"],
-            image: "/img/portfolio.png",
-            link: "https://github.com/Tonguechaude/Portfolio-vue",
+            tags: &["Rust", "Leptos", "Tailwind", "WASM"],
+            image: "/img/portfolio-rust.png",
+            link: "https://github.com/Tonguechaude/Portfolio-rust",
         },
     ]
 }
