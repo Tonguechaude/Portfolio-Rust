@@ -4,7 +4,7 @@ use leptos::prelude::*;
 /// Default Home Page
 #[component]
 pub fn HomePage() -> impl IntoView {
-    let selected_tags = RwSignal::new(vec!["Rust".to_string()]);
+    let selected_tags = RwSignal::new(vec!["⭐".to_string()]);
     view! {
         <div class="min-h-screen flex flex-col">
             <main class="flex-grow max-w-5xl mx-auto px-6 py-12">

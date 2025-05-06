@@ -7,7 +7,7 @@ pub fn ProjectPage() -> impl IntoView {
     let selected_tags = RwSignal::new(vec![]);
 
     let all_tags = vec![
-        "Rust", "TUI", "GUI", "WASM", "Tailwind", "Docker", "Java", "Jeu",
+        "Rust", "TUI", "GUI", "WASM", "Tailwind", "Docker", "Java", "Jeu", "⭐",
     ]
     .into_iter()
     .map(|s| s.to_string())
