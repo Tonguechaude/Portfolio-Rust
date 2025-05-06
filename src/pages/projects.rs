@@ -6,10 +6,12 @@ use leptos::prelude::*;
 pub fn ProjectPage() -> impl IntoView {
     let selected_tags = RwSignal::new(vec![]);
 
-    let all_tags = vec!["Rust", "Cargo", "Bevy", "WASM", "Tailwind", "Leptos"]
-        .into_iter()
-        .map(|s| s.to_string())
-        .collect::<Vec<_>>();
+    let all_tags = vec![
+        "Rust", "TUI", "GUI", "WASM", "Tailwind", "Docker", "Java", "Jeu",
+    ]
+    .into_iter()
+    .map(|s| s.to_string())
+    .collect::<Vec<_>>();
 
     view! {
         <div class="bg-gray-50 min-h-screen py-12 px-6">
