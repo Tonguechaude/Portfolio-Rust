@@ -9,9 +9,57 @@ pub fn ComptoirPage() -> impl IntoView {
             <p class="mb-2">
                 "Projet en autonomie à la demande du développeur principal. Scan de tous les logiciels via API pour identifier ceux obsolètes ou non maintenus."
             </p>
-            <p class="mb-2">
+            <p class="mb-6">
                 "Déploiement rapide, tests unitaires, interprétation des résultats, et documentation à destination du Comptoir."
             </p>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 2 — Optimiser, Sélectionner les algorithme adéquats pour répondre à un problème donné"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                    <li>
+                        <strong>"AC 1 — Choix de structures adaptées :" </strong>
+                        "Analyse des besoins du Comptoir → définition d’un modèle permettant de stocker efficacement les métadonnées logicielles (dates, versions, statuts) avec SQLite."
+                    </li>
+                    <li>
+                        <strong>"AC 2 — Algorithmes adaptés :" </strong>
+                        "Écriture d’un analyseur automatique capable de traiter les retours de l’API publique, d’en extraire les données pertinentes, puis de les filtrer selon des critères de fraîcheur/pertinence."
+                    </li>
+                    <li>
+                        <strong>"AC 3 — Sécurité :" </strong>
+                        "Bien que le projet soit plus orienté data, le code a été écrit avec rigueur pour éviter les erreurs (validation des entrées, traitement des erreurs API, etc.)."
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 4 — Gérer, Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                    <li>
+                        <strong>"AC 3 — Restitution et visualisation :"</strong>
+                        "Résultats présentés sous forme de rapports clairs et lisibles pour le client, avec des recommandations explicites."
+                    </li>
+                    <li>
+                        <strong>"AC 4 — Données hétérogènes :"</strong>
+                        "Traitement de données variées issues de l’API : texte, dates, URLs, versions logicielles. Parsing et homogénéisation pour en tirer des conclusions utiles."
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 5 — Conduire, Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                    <li>
+                        <strong>"AC 2 — Formalisation du besoin client :" </strong>
+                        "Échanges directs avec le développeur principal pour bien comprendre le besoin d’audit, puis reformulation dans une documentation."
+                    </li>
+                    <li>
+                        <strong>"AC 4 — Suivi de projet :"</strong>
+                        "Bien que court, ce projet a été structuré autour de jalons précis : spécification, développement, livraison, retour client."
+                    </li>
+                </ul>
+            </section>
+
+            <p class="text-lg font-semibold text-green-800 dark:text-green-300">"Niveau global : Acquis ✅"</p>
         </main>
     }
 }
