@@ -14,6 +14,7 @@ pub fn Navbar() -> impl IntoView {
                 <ul class="hidden md:flex space-x-6 text-gray-700">
                     <li><a href="/" class="hover:text-blue-600 transition">Accueil</a></li>
                     <li><a href="/projects" class="hover:text-blue-600 transition">Projets</a></li>
+                    <li><a href="/articles" class="hover:text-blue-600 transition">Articles</a></li>
                     <li><a href="/apprentissages" class="hover:text-blue-600 transition">Apprentissages</a></li>
                     <li><a href="/contact" class="hover:text-blue-600 transition">Contact</a></li>
                 </ul>
@@ -53,10 +54,10 @@ pub fn Navbar() -> impl IntoView {
                     </li>
                     <li>
                         <a
-                            href="/contact"
+                            href="/articles"
                             class="hover:text-blue-600 transition"
                             on:click=move |_| is_menu_open.set(false)
-                        >Contact</a>
+                        >Articles</a>
                     </li>
                     <li>
                         <a
@@ -65,6 +66,14 @@ pub fn Navbar() -> impl IntoView {
                             on:click=move |_| is_menu_open.set(false)
                         >Apprentissages</a>
                     </li>
+                    <li>
+                        <a
+                            href="/contact"
+                            class="hover:text-blue-600 transition"
+                            on:click=move |_| is_menu_open.set(false)
+                        >Contact</a>
+                    </li>
+
                 </ul>
             </div>
         </nav>
