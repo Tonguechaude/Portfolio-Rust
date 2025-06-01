@@ -1,7 +1,6 @@
 use crate::components::project::Projects;
 use leptos::prelude::*;
 
-/// Default Home Page
 #[component]
 pub fn HomePage() -> impl IntoView {
     let selected_tags = RwSignal::new(vec!["⭐".to_string()]);
@@ -13,7 +12,7 @@ pub fn HomePage() -> impl IntoView {
                         "👋 Salut, moi c'est Evan"
                     </h1>
                     <p class="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-                        "Développeur passionné, amateur de Rust, explorateur de pixels et de performances. Voici un aperçu de ce que je bricole."
+                        "Développeur passionné, amateur de Rust, explorateur de pixels et de performances. Voici un aperçu de ce que je façonne de mes doigts et sans IA !!"
                     </p>
                 </section>
 
