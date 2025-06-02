@@ -14,8 +14,8 @@ pub fn SaePage() -> impl IntoView {
             </p>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 2 — Optimiser, Sélectionner les algorithme adéquats pour répondre à un problème donné"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 2 — Optimiser, Sélectionner les algorithme adéquats pour répondre à un problème donné"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800">
                     <li>
                         <strong>"AC 1 — Structures de données complexes adaptées au problème :" </strong>
                         "Implémentation d’un modèle MVC pour séparer les responsabilités. Utilisation de design patterns pour rendre l’application modulaire."
@@ -32,8 +32,8 @@ pub fn SaePage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 4 — Gérer, Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 4 — Gérer, Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800">
                     <li>
                         <strong>"AC 1 — Modélisation BD efficace :" </strong>
                         "Modèle de données pensé pour assurer l’intégrité et l’anonymat du vote. Utilisation de contraintes et d’index adaptés."
@@ -46,8 +46,8 @@ pub fn SaePage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 5 — Conduire, , Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 5 — Conduire, , Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800">
                     <li>
                         <strong>"AC 4 — Démarche de suivi :" </strong>
                         "Travail structuré en méthode agile. Chaque itération donnait lieu à un test complet de sécurité et à un point d’équipe."
@@ -55,7 +55,7 @@ pub fn SaePage() -> impl IntoView {
                 </ul>
             </section>
 
-            <p class="text-lg font-semibold text-green-800 dark:text-green-300">"Niveau global : Acquis ✅"</p>
+            <p class="text-lg font-semibold text-green-800">"Niveau global : Acquis ✅"</p>
         </main>
     }
 }

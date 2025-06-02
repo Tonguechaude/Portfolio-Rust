@@ -14,8 +14,8 @@ pub fn TicketingPage() -> impl IntoView {
             </p>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 2 — Optimiser, Sélectionner les algorithme adéquats pour répondre à un problème donné"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 2 — Optimiser, Sélectionner les algorithme adéquats pour répondre à un problème donné"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800">
                     <li>
                         <strong>"AC 1 — Choisir des structures de données complexes adaptées au problème :"</strong>
                         "L’architecture de l’outil a été pensée pour séparer les entités principales : tickets, utilisateurs, services… J’ai conçu des classes Ruby modélisant précisément les objets métier, en respectant les principes SOLID, facilitant leur évolution."
@@ -32,8 +32,8 @@ pub fn TicketingPage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 4 — Gérer, Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 4 — Gérer, Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800">
                     <li>
                         <strong>"AC 2 — Assurer la confidentialité des données :" </strong>
                         "Connexions sécurisées, contrôle des accès, données sensibles protégées. Les identifiants des agents étaient stockés de manière sécurisée, et les permissions finement gérées."
@@ -42,8 +42,8 @@ pub fn TicketingPage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 5 — Conduire, Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 5 — Conduire, Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800">
                     <li>
                         <strong>"AC 1 — Identifier les processus présents dans une organisation :" </strong>
                         "Une analyse des flux internes a été effectuée pour bien comprendre les besoins des utilisateurs et leurs contraintes métier."
@@ -63,7 +63,7 @@ pub fn TicketingPage() -> impl IntoView {
                 </ul>
             </section>
 
-            <p class="text-lg font-semibold text-green-800 dark:text-green-300">"Niveau global sur les compétences mobilisées : Acquis ✅"</p>
+            <p class="text-lg font-semibold text-green-800">"Niveau global sur les compétences mobilisées : Acquis ✅"</p>
         </main>
     }
 }

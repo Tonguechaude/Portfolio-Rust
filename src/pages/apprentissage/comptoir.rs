@@ -14,8 +14,8 @@ pub fn ComptoirPage() -> impl IntoView {
             </p>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 2 — Optimiser des applications"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 2 — Optimiser des applications"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800">
                     <li>
                         <strong>"AC 1 — Choix de structures adaptées :" </strong>
                         "Analyse des besoins du Comptoir → définition d’un modèle permettant de stocker efficacement les métadonnées logicielles (dates, versions, statuts) avec SQLite."
@@ -35,8 +35,8 @@ pub fn ComptoirPage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 4 — Gérer des données de l’information"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 4 — Gérer des données de l’information"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800">
                     <li>
                         <strong>"AC 3 — Restitution et visualisation :"</strong>
                         "Résultats présentés sous forme de rapports clairs et lisibles pour le client."
@@ -50,8 +50,8 @@ pub fn ComptoirPage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 5 — Conduire un projet"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
+                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 5 — Conduire un projet"</h2>
+                <ul class="list-disc list-inside space-y-2 text-zinc-800">
                     <li>
                         <strong>"AC 2 — Formalisation du besoin client :" </strong>
                         "Échanges directs avec le développeur principal pour bien comprendre le besoin d’audit, puis reformulation dans une documentation."
@@ -63,7 +63,7 @@ pub fn ComptoirPage() -> impl IntoView {
                 </ul>
             </section>
 
-            <p class="text-lg font-semibold text-green-800 dark:text-green-300">"Niveau global : Acquis ✅"</p>
+            <p class="text-lg font-semibold text-green-800">"Niveau global : Acquis ✅"</p>
         </main>
     }
 }

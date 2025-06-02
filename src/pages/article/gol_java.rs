@@ -3,12 +3,11 @@ use leptos::prelude::*;
 #[component]
 pub fn GolJavaArticlePage() -> impl IntoView {
     view! {
-        <main class="max-w-5xl mx-auto px-6 py-12 space-y-6 text-zinc-800 dark:text-zinc-100">
+        <main class="max-w-5xl mx-auto px-6 py-12 space-y-6 text-zinc-800">
             <h1 class="text-4xl font-bold">"Jeu de la Vie en Java avec Swing"</h1>
 
             <p class="text-lg">
                 "Implémentation du célèbre automate cellulaire de John Conway en Java, avec une interface graphique interactive basée sur Swing."
-                " "
                 <a href="https://github.com/Tonguechaude/GOL" class="text-blue-600 underline" target="_blank">"Voir le dépôt GitHub"</a>
             </p>
 

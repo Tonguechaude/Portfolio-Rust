@@ -3,19 +3,18 @@ use leptos::prelude::*;
 #[component]
 pub fn ConvertisseurRustArticlePage() -> impl IntoView {
     view! {
-        <main class="max-w-5xl mx-auto px-6 py-12 space-y-6 text-zinc-800 dark:text-zinc-100">
+        <main class="max-w-5xl mx-auto px-6 py-12 space-y-6 text-zinc-800">
             <h1 class="text-4xl font-bold">"Convertisseur Rust Dockerisé"</h1>
 
             <p class="text-lg">
                 "Un convertisseur numérique en Rust permettant de comparer les performances avec une version équivalente en C. Le projet est entièrement dockerisé pour simplifier l'exécution."
-                " "
                 <a href="https://github.com/Tonguechaude/Convertisseur-Rust" class="text-blue-600 underline" target="_blank">"Voir le code source sur GitHub"</a>
             </p>
 
             <section>
                 <h2 class="text-2xl font-semibold mt-6 mb-2">"Présentation du Projet"</h2>
                 <p>
-                    "Ce convertisseur permet de convertir un nombre donné dans différentes bases : binaire, octal, décimal et hexadécimal. Il s’agit d’un projet d’apprentissage de Rust, basé sur un convertisseur en C réalisé auparavant. Il est également dockerisé pour être exécuté facilement sur n’importe quelle machine sans configuration préalable."
+                    "Ce convertisseur permet de convertir un nombre dans différentes bases : binaire, octal, décimal et hexadécimal. Il s’agit d’un projet d’apprentissage de Rust, basé sur un convertisseur en C réalisé auparavant. Il est également dockerisé pour être exécuté facilement sur n’importe quelle machine sans configuration préalable."
                 </p>
             </section>
 
