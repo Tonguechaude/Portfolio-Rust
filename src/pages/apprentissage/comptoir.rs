@@ -14,39 +14,43 @@ pub fn ComptoirPage() -> impl IntoView {
             </p>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 2 — Optimiser, Sélectionner les algorithme adéquats pour répondre à un problème donné"</h2>
+                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 2 — Optimiser des applications"</h2>
                 <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
                     <li>
                         <strong>"AC 1 — Choix de structures adaptées :" </strong>
                         "Analyse des besoins du Comptoir → définition d’un modèle permettant de stocker efficacement les métadonnées logicielles (dates, versions, statuts) avec SQLite."
+                        <img alt="bdd" src="/img/apprentissages/comptoir/rusqlite.png" class="rounded-lg border shadow-lg"></img>
                     </li>
                     <li>
                         <strong>"AC 2 — Algorithmes adaptés :" </strong>
                         "Écriture d’un analyseur automatique capable de traiter les retours de l’API publique, d’en extraire les données pertinentes, puis de les filtrer selon des critères de fraîcheur/pertinence."
+                        <img alt="api" src="/img/apprentissages/comptoir/api_management.png" class="rounded-lg border shadow-lg"></img>
                     </li>
                     <li>
                         <strong>"AC 3 — Sécurité :" </strong>
                         "Bien que le projet soit plus orienté data, le code a été écrit avec rigueur pour éviter les erreurs (validation des entrées, traitement des erreurs API, etc.)."
+                        <img alt="error" src="/img/apprentissages/comptoir/gestion_erreur.png" class="rounded-lg border shadow-lg"></img>
                     </li>
                 </ul>
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 4 — Gérer, Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité"</h2>
+                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 4 — Gérer des données de l’information"</h2>
                 <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
                     <li>
                         <strong>"AC 3 — Restitution et visualisation :"</strong>
-                        "Résultats présentés sous forme de rapports clairs et lisibles pour le client, avec des recommandations explicites."
+                        "Résultats présentés sous forme de rapports clairs et lisibles pour le client."
+                        <img alt="error" src="/img/apprentissages/comptoir/resultat.png" class="rounded-lg border shadow-lg"></img>
                     </li>
                     <li>
                         <strong>"AC 4 — Données hétérogènes :"</strong>
-                        "Traitement de données variées issues de l’API : texte, dates, URLs, versions logicielles. Parsing et homogénéisation pour en tirer des conclusions utiles."
+                        "Traitement de données variées issues de l’API : texte, dates, URLs. Parsing et homogénéisation pour en tirer des conclusions utiles."
                     </li>
                 </ul>
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 5 — Conduire, Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs"</h2>
+                <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-2">"Compétence 5 — Conduire un projet"</h2>
                 <ul class="list-disc list-inside space-y-2 text-zinc-800 dark:text-zinc-200">
                     <li>
                         <strong>"AC 2 — Formalisation du besoin client :" </strong>
