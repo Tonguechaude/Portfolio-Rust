@@ -21,9 +21,30 @@ use crate::pages::article::voteomatic::VoteOmaticArticlePage;
 use crate::pages::articles::ArticlesPage;
 use crate::pages::contact::ContactPage;
 use crate::pages::home::HomePage;
+use crate::pages::not_found::NotFoundPage;
 use crate::pages::projects::ProjectPage;
 
 // An app router which renders the homepage and handles 404's
+
+#[component]
+fn DefaultLayout() -> impl IntoView {
+    view! {
+        <>
+            <Navbar />
+            <main class="flex-grow">
+                <Outlet />
+            </main>
+            <Copyright year=2025 />
+        </>
+    }
+}
+
+#[component]
+fn BareLayout() -> impl IntoView {
+    view! {
+        <Outlet />
+    }
+}
 
 #[component]
 pub fn App() -> impl IntoView {
@@ -37,25 +58,27 @@ pub fn App() -> impl IntoView {
 
         <div class="min-h-screen flex flex-col">
             <Router>
-                <Navbar />
-                <main class="flex-grow">
-                    <Routes fallback=|| view! { NotFound }>
+            <Routes fallback=|| view! { <NotFoundPage /> }>
+                    <ParentRoute path=path!("") view=DefaultLayout>
                         <Route path=path!("/") view=HomePage />
                         <Route path=path!("/contact") view=ContactPage />
                         <Route path=path!("/projects") view=ProjectPage />
                         <Route path=path!("/articles") view=ArticlesPage />
-                        <Route path=path!("/articles/voteomatic") view=VoteOmaticArticlePage />
-                        <Route path=path!("/articles/comptoir") view=ComptoirArticlePage />
-                        <Route path=path!("/articles/convertisseur_rust") view=ConvertisseurRustArticlePage />
-                        <Route path=path!("/articles/gol_java") view=GolJavaArticlePage />
-                        <Route path=path!("/apprentissages") view=ApprentissagePage />
                         <Route path=path!("/apprentissages/sae") view=SaePage />
-                        <Route path=path!("/apprentissages/ticketing") view=TicketingPage />
+                        <Route path=path!("/apprentissages") view=ApprentissagePage />
                         <Route path=path!("/apprentissages/comptoir") view=ComptoirPage />
-                    </Routes>
-                </main>
+                        <Route path=path!("/articles/gol_java") view=GolJavaArticlePage />
+                        <Route path=path!("/articles/comptoir") view=ComptoirArticlePage />
+                        <Route path=path!("/apprentissages/ticketing") view=TicketingPage />
+                        <Route path=path!("/articles/voteomatic") view=VoteOmaticArticlePage />
+                        <Route path=path!("/articles/convertisseur_rust") view=ConvertisseurRustArticlePage />
+                    </ParentRoute>
+
+                    <ParentRoute path=path!("/*any") view=BareLayout>
+                        <Route path=path!("/*any") view=NotFoundPage />
+                    </ParentRoute>
+                </Routes>
             </Router>
-            <Copyright year=2025 />
         </div>
     }
 }
