@@ -20,14 +20,17 @@ pub fn TicketingPage() -> impl IntoView {
                         <strong>"AC 1 — Choisir des structures de données complexes adaptées au problème :"</strong>
                         "L’architecture de l’outil a été pensée pour séparer les entités principales : tickets, utilisateurs, services… J’ai conçu des classes Ruby modélisant précisément les objets métier, en respectant les principes SOLID, facilitant leur évolution."
                     </li>
+                    <img alt="class ruby" src="/img/apprentissages/service-desk/ruby.png" class="rounded-lg border shadow-lg"></img>
                     <li>
                         <strong>"AC 3 — Comprendre les enjeux et moyens de sécurisation des données et du code :"</strong>
                         "Une attention particulière a été portée à la gestion des droits : les rôles des utilisateurs conditionnaient les accès, avec des vérifications côté serveur. Les échanges sensibles étaient sécurisés."
                     </li>
+                    <img alt="acl" src="/img/apprentissages/service-desk/acl.png" class="rounded-lg border shadow-lg"></img>
                     <li>
                         <strong>"AC 4 — Évaluer l’impact environnemental et sociétal des solutions proposées :" </strong>
                         "Le projet visait à centraliser la gestion des demandes internes, remplaçant des traitements par mail. Cette dématérialisation améliore la traçabilité tout en réduisant les échanges dispersés et redondants."
                     </li>
+                    <img alt="service-desk" src="/img/apprentissages/service-desk/sd.png" class="rounded-lg border shadow-lg"></img>
                 </ul>
             </section>
 
@@ -38,6 +41,7 @@ pub fn TicketingPage() -> impl IntoView {
                         <strong>"AC 2 — Assurer la confidentialité des données :" </strong>
                         "Connexions sécurisées, contrôle des accès, données sensibles protégées. Les identifiants des agents étaient stockés de manière sécurisée, et les permissions finement gérées."
                     </li>
+                    <img alt="service-desk login" src="/img/apprentissages/service-desk/login.png" class="rounded-lg border shadow-lg"></img>
                 </ul>
             </section>
 

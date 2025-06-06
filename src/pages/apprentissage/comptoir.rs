@@ -19,18 +19,18 @@ pub fn ComptoirPage() -> impl IntoView {
                     <li>
                         <strong>"AC 1 — Choix de structures adaptées :" </strong>
                         "Analyse des besoins du Comptoir → définition d’un modèle permettant de stocker efficacement les métadonnées logicielles (dates, versions, statuts) avec SQLite."
-                        <img alt="bdd" src="/img/apprentissages/comptoir/rusqlite.png" class="rounded-lg border shadow-lg"></img>
                     </li>
+                    <img alt="bdd" src="/img/apprentissages/comptoir/rusqlite.png" class="rounded-lg border shadow-lg"></img>
                     <li>
                         <strong>"AC 2 — Algorithmes adaptés :" </strong>
                         "Écriture d’un analyseur automatique capable de traiter les retours de l’API publique, d’en extraire les données pertinentes, puis de les filtrer selon des critères de fraîcheur/pertinence."
-                        <img alt="api" src="/img/apprentissages/comptoir/api_management.png" class="rounded-lg border shadow-lg"></img>
                     </li>
+                    <img alt="api" src="/img/apprentissages/comptoir/api_management.png" class="rounded-lg border shadow-lg"></img>
                     <li>
                         <strong>"AC 3 — Sécurité :" </strong>
                         "Bien que le projet soit plus orienté data, le code a été écrit avec rigueur pour éviter les erreurs (validation des entrées, traitement des erreurs API, etc.)."
-                        <img alt="error" src="/img/apprentissages/comptoir/gestion_erreur.png" class="rounded-lg border shadow-lg"></img>
                     </li>
+                    <img alt="error" src="/img/apprentissages/comptoir/gestion_erreur.png" class="rounded-lg border shadow-lg"></img>
                 </ul>
             </section>
 
@@ -40,8 +40,8 @@ pub fn ComptoirPage() -> impl IntoView {
                     <li>
                         <strong>"AC 3 — Restitution et visualisation :"</strong>
                         "Résultats présentés sous forme de rapports clairs et lisibles pour le client."
-                        <img alt="error" src="/img/apprentissages/comptoir/resultat.png" class="rounded-lg border shadow-lg"></img>
                     </li>
+                    <img alt="error" src="/img/apprentissages/comptoir/resultat.png" class="rounded-lg border shadow-lg"></img>
                     <li>
                         <strong>"AC 4 — Données hétérogènes :"</strong>
                         "Traitement de données variées issues de l’API : texte, dates, URLs. Parsing et homogénéisation pour en tirer des conclusions utiles."
