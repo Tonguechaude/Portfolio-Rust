@@ -8,7 +8,7 @@ pub fn Navbar() -> impl IntoView {
         <nav class="bg-white shadow-md py-4 px-6">
             <div class="container mx-auto flex justify-between items-center">
                 <div class="text-2xl font-bold text-gray-800">
-                    <a href="/" class="hover:text-blue-600 transition">Atelier de Tonguechaude</a>
+                    <a href="/" class="hover:text-blue-600 transition">"Atelier d'Evan"</a>
                 </div>
 
                 <ul class="hidden md:flex space-x-6 text-gray-700">
