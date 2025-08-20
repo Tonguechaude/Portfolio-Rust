@@ -20,6 +20,7 @@ use crate::pages::article::gol_java::GolJavaArticlePage;
 use crate::pages::article::voteomatic::VoteOmaticArticlePage;
 use crate::pages::articles::ArticlesPage;
 use crate::pages::contact::ContactPage;
+use crate::pages::contributions::ContributionsPage;
 use crate::pages::home::HomePage;
 use crate::pages::not_found::NotFoundPage;
 use crate::pages::projects::ProjectPage;
@@ -64,6 +65,7 @@ pub fn App() -> impl IntoView {
                         <Route path=path!("/contact") view=ContactPage />
                         <Route path=path!("/projects") view=ProjectPage />
                         <Route path=path!("/articles") view=ArticlesPage />
+                        <Route path=path!("/contributions") view=ContributionsPage />
                         <Route path=path!("/apprentissages/sae") view=SaePage />
                         <Route path=path!("/apprentissages") view=ApprentissagePage />
                         <Route path=path!("/apprentissages/comptoir") view=ComptoirPage />

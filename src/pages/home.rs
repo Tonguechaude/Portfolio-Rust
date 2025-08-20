@@ -1,4 +1,5 @@
 use crate::components::project::Projects;
+use crate::components::recent_contributions::RecentContributions;
 use leptos::prelude::*;
 
 #[component]
@@ -12,13 +13,13 @@ pub fn HomePage() -> impl IntoView {
                         "👋 Salut, moi c'est Evan"
                     </h1>
                     <p class="text-xl text-zinc-600 max-w-2xl mx-auto">
-                        "Développeur passionné, amateur de Rust, explorateur de pixels et de performances. Voici un aperçu de ce que je façonne de mes doigts et sans IA !!"
+                        "Développeur passionné et amateur de Rust. Voici un aperçu de ce que je façonne de mes doigts musclés et sans IA !!"
                     </p>
                 </section>
 
                 <section class="mb-16">
                     <h2 class="text-3xl font-bold text-zinc-800 mb-6">
-                        "👨‍💻 À propos de moi"
+                        "À propos de moi"
                     </h2>
                     <div class="space-y-4 text-zinc-700 leading-relaxed">
                         <p>
@@ -49,6 +50,13 @@ pub fn HomePage() -> impl IntoView {
                         "🛠️ Mes projets récents"
                     </h2>
                     <Projects selected_tags=selected_tags />
+                </section>
+
+                <section class="mb-16">
+                    <RecentContributions
+                        username="tonguechaude".to_string()
+                        token=None
+                    />
                 </section>
             </main>
         </div>

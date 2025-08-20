@@ -16,6 +16,7 @@ pub fn Navbar() -> impl IntoView {
                     <li><a href="/projects" class="hover:text-blue-600 transition">Projets</a></li>
                     <li><a href="/articles" class="hover:text-blue-600 transition">Articles</a></li>
                     <li><a href="/apprentissages" class="hover:text-blue-600 transition">Apprentissages</a></li>
+                    <li><a href="/contributions" class="hover:text-blue-600 transition">Contributions au libre</a></li>
                     <li><a href="/contact" class="hover:text-blue-600 transition">Contact</a></li>
                 </ul>
 
@@ -65,6 +66,13 @@ pub fn Navbar() -> impl IntoView {
                             class="hover:text-blue-600 transition"
                             on:click=move |_| is_menu_open.set(false)
                         >Apprentissages</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/contributions"
+                            class="hover:text-blue-600 transition"
+                            on:click=move |_| is_menu_open.set(false)
+                        >Contributions au libre</a>
                     </li>
                     <li>
                         <a
