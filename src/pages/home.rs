@@ -36,11 +36,11 @@ pub fn HomePage() -> impl IntoView {
                         <p>
                             {r#"Curieux et engagé, je reste ouvert aux opportunités mêlant innovation technologique, sécurité et impact social via le logiciel libre."#}
                         </p>
-                        <a href="img/cv.png" target="_blank" class="flex items-center gap-1 text-indigo-600 hover:underline dark:text-indigo-400" download >
-                            <p>
-                                {r#"Vous pouvez télécharger mon CV juste ici !"#}
-                            </p>
-                        </a>
+                        // <a href="img/cv.png" target="_blank" class="flex items-center gap-1 text-indigo-600 hover:underline dark:text-indigo-400" download >
+                        //     <p>
+                        //         {r#"Vous pouvez télécharger mon CV juste ici !"#}
+                        //     </p>
+                        // </a>
                     </div>
                 </section>
 
