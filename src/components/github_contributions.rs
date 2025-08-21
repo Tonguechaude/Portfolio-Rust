@@ -128,30 +128,17 @@ pub fn GitHubContributions(username: String, token: Option<String>) -> impl Into
         }
     };
 
-    let get_state_badge = |state: &str| -> &'static str {
-        match state {
-            "MERGED" => "bg-green-100 text-green-800",
-            "OPEN" => "bg-blue-100 text-blue-800",
-            "CLOSED" => "bg-red-100 text-red-800",
-            _ => "bg-gray-100 text-gray-800",
-        }
-    };
-
-    // <!-- Badge Open style GitHub -->
-    // <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium text-white" style="background-color: #1a7f37;">
-    //     <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
-    //         <path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"/>
-    //     </svg>
-    //     Open
-    // </span>
-
     view! {
         <div class="w-full">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-bold text-zinc-800">
-                    "🚀 Mes contributions GitHub"
+                <h3 class="text-2xl font-bold text-zinc-800 flex items-center gap-2">
+                    <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" class="text-zinc-700">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    "Mes contributions GitHub"
                 </h3>
-                <button
+                <a
+                    href="#"
                     on:click={
                         let username = username.clone();
                         let pull_requests = pull_requests;
@@ -160,7 +147,8 @@ pub fn GitHubContributions(username: String, token: Option<String>) -> impl Into
                         let excluded_repos = excluded_repos.clone();
                         let excluded_titles = excluded_titles.clone();
 
-                        move |_| {
+                        move |ev| {
+                            ev.prevent_default();
                             spawn_local({
                                 let username = username.clone();
                                 let pull_requests = pull_requests;
@@ -236,11 +224,10 @@ pub fn GitHubContributions(username: String, token: Option<String>) -> impl Into
                             });
                         }
                     }
-                    class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
-                    disabled=move || loading.get()
+                    class="text-indigo-600 hover:text-indigo-800 hover:underline text-sm transition-colors"
                 >
-                    {move || if loading.get() { "🔄 Chargement..." } else { "🔄 Actualiser" }}
-                </button>
+                    {move || if loading.get() { "Actualisation..." } else { "Actualiser" }}
+                </a>
             </div>
 
             {move || {
@@ -278,7 +265,6 @@ pub fn GitHubContributions(username: String, token: Option<String>) -> impl Into
                                 </div>
                                 <div class="grid gap-4">
                                     {prs.into_iter().map(|pr| {
-                                        let state_badge = get_state_badge(&pr.state);
                                         let created_date = format_date(&pr.created_at);
                                         let merged_date = pr.merged_at.as_ref().map(|d| format_date(d));
 
@@ -286,9 +272,29 @@ pub fn GitHubContributions(username: String, token: Option<String>) -> impl Into
                                             <div class="bg-white border border-zinc-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                                                 <div class="flex items-start justify-between mb-3">
                                                     <div class="flex items-center gap-2">
-                                                        <span class={format!("px-2 py-1 rounded-full text-xs font-medium {}", state_badge)}>
-                                                            {pr.state}
-                                                        </span>
+                                                        {match pr.state.as_str() {
+                                                            "MERGED" => view! {
+                                                                <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium text-white" style="background-color: #8250df;">
+                                                                    <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
+                                                                        <path d="M5.45 5.154A4.25 4.25 0 0 0 9.25 7.5h1.378a2.251 2.251 0 1 1 0 1.5H9.25A5.734 5.734 0 0 1 5 7.123v3.505a2.25 2.25 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.95-.218ZM4.25 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm8.5-4.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM4.25 4a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"/>
+                                                                    </svg>
+                                                                    "Merged"
+                                                                </span>
+                                                            }.into_any(),
+                                                            "OPEN" => view! {
+                                                                <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium text-white" style="background-color: #1a7f37;">
+                                                                    <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
+                                                                        <path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"/>
+                                                                    </svg>
+                                                                    "Open"
+                                                                </span>
+                                                            }.into_any(),
+                                                            _ => view! {
+                                                                <span class="px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                                                                    {pr.state.clone()}
+                                                                </span>
+                                                            }.into_any(),
+                                                        }}
                                                     </div>
                                                     <div class="text-sm text-zinc-500">
                                                         {created_date}
