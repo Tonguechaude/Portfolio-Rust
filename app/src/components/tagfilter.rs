@@ -23,9 +23,9 @@ pub fn TagFilter(tags: Vec<String>, selected_tags: RwSignal<Vec<String>>) -> imp
                     <button
                         class=move || {
                             if is_selected() {
-                                "px-4 py-2 rounded-full bg-blue-600 text-white border border-blue-600 transition"
+                                "px-4 py-2 rounded-full bg-theme-accent text-white border border-theme-accent transition"
                             } else {
-                                "px-4 py-2 rounded-full bg-white text-gray-800 border border-gray-300 transition hover:bg-gray-100"
+                                "px-4 py-2 rounded-full bg-theme-primary text-theme-primary border border-theme-secondary transition hover:bg-theme-nav"
                             }
                         }
                         on:click=onclick

@@ -3,7 +3,7 @@ use leptos::prelude::*;
 #[component]
 pub fn VoteOmaticArticlePage() -> impl IntoView {
     view! {
-        <main class="max-w-5xl mx-auto px-6 py-12 space-y-6 text-zinc-800">
+        <main class="max-w-5xl mx-auto px-6 py-12 space-y-6 text-theme-primary">
             <h1 class="text-4xl font-bold">"VoteOmatic — Application de Vote en Ligne"</h1>
 
             <section>

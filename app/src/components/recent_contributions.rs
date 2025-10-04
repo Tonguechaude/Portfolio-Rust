@@ -145,7 +145,7 @@ pub fn RecentContributions(username: String, token: Option<String>) -> impl Into
                     let prs = pull_requests.get();
                     if prs.is_empty() {
                         view! {
-                            <div class="text-center py-6 text-zinc-500">
+                            <div class="text-center py-6 text-theme-secondary">
                                 <p class="text-sm">"Aucune contribution récente"</p>
                             </div>
                         }.into_any()
@@ -153,7 +153,7 @@ pub fn RecentContributions(username: String, token: Option<String>) -> impl Into
                         view! {
                             <div class="space-y-3">
                                 <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-lg font-semibold text-zinc-800">
+                                    <h3 class="text-lg font-semibold text-theme-primary">
                                         "Contributions récentes au libre"
                                     </h3>
                                     <a href="/contributions" class="text-sm text-indigo-600 hover:text-indigo-800 hover:underline">
@@ -165,7 +165,7 @@ pub fn RecentContributions(username: String, token: Option<String>) -> impl Into
                                     let merged_date = pr.merged_at.as_ref().map(|d| format_date(d));
 
                                     view! {
-                                        <div class="bg-white border border-zinc-200 rounded-lg p-4 hover:shadow-sm transition-shadow">
+                                        <div class="bg-theme-primary border border-zinc-200 rounded-lg p-4 hover:shadow-sm transition-shadow">
                                             <div class="flex items-start justify-between mb-2">
                                                 <div class="flex items-center gap-2">
                                                     <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium text-white" style="background-color: #8250df;">
@@ -175,18 +175,18 @@ pub fn RecentContributions(username: String, token: Option<String>) -> impl Into
                                                         Merged
                                                     </span>
                                                 </div>
-                                                <div class="text-xs text-zinc-500">
+                                                <div class="text-xs text-theme-secondary">
                                                     {merged_date.unwrap_or_default()}
                                                 </div>
                                             </div>
 
-                                            <h4 class="font-medium text-zinc-800 mb-1 text-sm leading-tight">
+                                            <h4 class="font-medium text-theme-primary mb-1 text-sm leading-tight">
                                                 <a href={pr.url.clone()} target="_blank" class="hover:text-indigo-600 transition-colors">
                                                     {pr.title}
                                                 </a>
                                             </h4>
 
-                                            <div class="flex items-center text-xs text-zinc-600">
+                                            <div class="flex items-center text-xs text-theme-secondary">
                                                 <span class="font-medium">{"📁"}</span>
                                                 <a href={pr.repo_url.clone()} target="_blank" class="ml-1 hover:text-indigo-600 transition-colors">
                                                     {pr.repo_name.clone()}

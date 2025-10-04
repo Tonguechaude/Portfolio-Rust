@@ -2,6 +2,35 @@
 resolver = "2"
 members = ["app", "frontend", "server"]
 
+[package]
+name = "portfolio"
+version = "0.1.0"
+edition = "2024"
+authors = ["tongue <evan.challias@tonguechaude.fr>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+leptos = { version = "0.7", features = ["csr"] }
+leptos_meta = { version = "0.7" }
+leptos_router = { version = "0.7" }
+console_log = "1"
+log = "0.4"
+console_error_panic_hook = "0.1"
+
+# HTTP client and serialization
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# utils
+# strum = { version = "0.25", features = ["derive", "strum_macros"] }
+# strum_macros = "0.25"
+
+[dev-dependencies]
+wasm-bindgen = "0.2"
+wasm-bindgen-test = "0.3"
+web-sys = { version = "0.3", features = ["Document", "Window"] }
+
 [profile.release]
 codegen-units = 1
 lto = true

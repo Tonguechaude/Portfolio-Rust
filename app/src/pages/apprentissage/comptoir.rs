@@ -4,18 +4,18 @@ use leptos::prelude::*;
 pub fn ComptoirPage() -> impl IntoView {
     view! {
         <main class="max-w-5xl mx-auto px-6 py-12">
-            <h1 class="text-4xl font-bold mb-4">"Audit automatisé — Comptoir du Libre"</h1>
-            <p class="mb-4 italic">"Projet d'alternance — 2 semaines"</p>
-            <p class="mb-2">
+            <h1 class="text-4xl font-bold text-theme-primary mb-4">"Audit automatisé — Comptoir du Libre"</h1>
+            <p class="mb-4 italic text-theme-secondary">"Projet d'alternance — 2 semaines"</p>
+            <p class="mb-2 text-theme-secondary">
                 "Projet en autonomie à la demande du développeur principal. Scan de tous les logiciels via API pour identifier ceux obsolètes ou non maintenus."
             </p>
-            <p class="mb-6">
+            <p class="mb-6 text-theme-secondary">
                 "Déploiement rapide, tests unitaires, interprétation des résultats, et documentation à destination du Comptoir."
             </p>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 2 — Optimiser des applications"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800">
+                <h2 class="text-2xl font-semibold text-theme-success mb-2">"Compétence 2 — Optimiser des applications"</h2>
+                <ul class="list-disc list-inside space-y-2 text-theme-primary">
                     <li>
                         <strong>"AC 1 — Choix de structures adaptées :" </strong>
                         "Analyse des besoins du Comptoir → définition d’un modèle permettant de stocker efficacement les métadonnées logicielles (dates, versions, statuts) avec SQLite."
@@ -35,8 +35,8 @@ pub fn ComptoirPage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 4 — Gérer des données de l’information"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800">
+                <h2 class="text-2xl font-semibold text-theme-success mb-2">"Compétence 4 — Gérer des données de l'information"</h2>
+                <ul class="list-disc list-inside space-y-2 text-theme-primary">
                     <li>
                         <strong>"AC 3 — Restitution et visualisation :"</strong>
                         "Résultats présentés sous forme de rapports clairs et lisibles pour le client."
@@ -50,8 +50,8 @@ pub fn ComptoirPage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 5 — Conduire un projet"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800">
+                <h2 class="text-2xl font-semibold text-theme-success mb-2">"Compétence 5 — Conduire un projet"</h2>
+                <ul class="list-disc list-inside space-y-2 text-theme-primary">
                     <li>
                         <strong>"AC 2 — Formalisation du besoin client :" </strong>
                         "Échanges directs avec le développeur principal pour bien comprendre le besoin d’audit, puis reformulation dans une documentation."
@@ -63,7 +63,7 @@ pub fn ComptoirPage() -> impl IntoView {
                 </ul>
             </section>
 
-            <p class="text-lg font-semibold text-green-800">"Niveau global : Acquis ✅"</p>
+            <p class="text-lg font-semibold text-theme-success">"Niveau global : Acquis ✅"</p>
         </main>
     }
 }

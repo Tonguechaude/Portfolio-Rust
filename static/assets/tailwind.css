@@ -13,3 +13,43 @@
   --color-secondary: #e2e8f0;
   --color-accent: #63b3ed;
 }
+
+/* CSS variables for themes */
+:root {
+  --bg-primary: rgb(255 255 255);
+  --bg-nav: rgb(255 255 255);
+  --text-primary: rgb(39 39 42);
+  --text-secondary: rgb(82 82 91);
+  --text-accent: rgb(37 99 235);
+  --text-success: rgb(21 128 61);
+  --shadow: rgba(0, 0, 0, 0.1);
+  --bg-tag: rgb(229 231 235);
+  --text-tag: rgb(39 39 42);
+  --bg-card: rgb(255 255 255);
+}
+
+[data-theme="dark"] {
+  --bg-primary: rgb(24 24 27);
+  --bg-nav: rgb(39 39 42);
+  --text-primary: rgb(244 244 245);
+  --text-secondary: rgb(161 161 170);
+  --text-accent: rgb(96 165 250);
+  --text-success: rgb(134 239 172);
+  --shadow: rgba(0, 0, 0, 0.3);
+  --bg-tag: rgb(63 63 70);
+  --text-tag: rgb(244 244 245);
+  --bg-card: rgb(39 39 42);
+}
+
+.bg-theme-primary { background-color: var(--bg-primary); }
+.bg-theme-nav { background-color: var(--bg-nav); }
+.text-theme-primary { color: var(--text-primary); }
+.text-theme-secondary { color: var(--text-secondary); }
+.text-theme-accent { color: var(--text-accent); }
+.text-theme-success { color: var(--text-success); }
+.shadow-theme { box-shadow: 0 4px 6px -1px var(--shadow); }
+.border-theme-secondary { border-color: var(--text-secondary); }
+.hover\:bg-theme-nav:hover { background-color: var(--bg-nav); }
+.bg-theme-tag { background-color: var(--bg-tag); }
+.text-theme-tag { color: var(--text-tag); }
+.bg-theme-card { background-color: var(--bg-card); }

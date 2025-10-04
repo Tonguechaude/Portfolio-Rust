@@ -4,18 +4,18 @@ use leptos::prelude::*;
 pub fn SaePage() -> impl IntoView {
     view! {
         <main class="max-w-5xl mx-auto px-6 py-12">
-            <h1 class="text-4xl font-bold mb-4">"SAE : Logiciel de sondage en réseau"</h1>
-            <p class="mb-4 italic">"2ᵉ année BUT Informatique — DACS"</p>
-            <p class="mb-2">
-                "Travail en équipe de 5 personnes en méthode AGILE. Développement d’un logiciel de sondage avec un focus sur la cryptographie."
+            <h1 class="text-4xl font-bold text-theme-primary mb-4">"SAE : Logiciel de sondage en réseau"</h1>
+            <p class="mb-4 italic text-theme-secondary">"2ᵉ année BUT Informatique — DACS"</p>
+            <p class="mb-2 text-theme-secondary">
+                "Travail en équipe de 5 personnes en méthode AGILE. Développement d'un logiciel de sondage avec un focus sur la cryptographie."
             </p>
-            <p class="mb-6">
-                "J’ai pu y approfondir mes compétences en réseau, en sécurité, et en travail collaboratif sous pression."
+            <p class="mb-6 text-theme-secondary">
+                "J'ai pu y approfondir mes compétences en réseau, en sécurité, et en travail collaboratif sous pression."
             </p>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 2 — Optimiser, Sélectionner les algorithme adéquats pour répondre à un problème donné"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800">
+                <h2 class="text-2xl font-semibold text-theme-success mb-2">"Compétence 2 — Optimiser, Sélectionner les algorithme adéquats pour répondre à un problème donné"</h2>
+                <ul class="list-disc list-inside space-y-2 text-theme-primary">
                     <li>
                         <strong>"AC 1 — Structures de données complexes adaptées au problème :" </strong>
                         "Implémentation d’un modèle MVC pour séparer les responsabilités. Utilisation de design patterns pour rendre l’application modulaire."
@@ -35,8 +35,8 @@ pub fn SaePage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 4 — Gérer, Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800">
+                <h2 class="text-2xl font-semibold text-theme-success mb-2">"Compétence 4 — Gérer, Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité"</h2>
+                <ul class="list-disc list-inside space-y-2 text-theme-primary">
                     <li>
                         <strong>"AC 1 — Modélisation BD efficace :" </strong>
                         "Modèle de données pensé pour assurer l’intégrité et l’anonymat du vote. Utilisation de contraintes et d’index adaptés."
@@ -51,8 +51,8 @@ pub fn SaePage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 5 — Conduire, , Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800">
+                <h2 class="text-2xl font-semibold text-theme-success mb-2">"Compétence 5 — Conduire, , Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs"</h2>
+                <ul class="list-disc list-inside space-y-2 text-theme-primary">
                     <li>
                         <strong>"AC 4 — Démarche de suivi :" </strong>
                         "Travail structuré en méthode agile avec Gitlab. Chaque itération donnait lieu à un test complet de sécurité et à un point d’équipe."
@@ -61,7 +61,7 @@ pub fn SaePage() -> impl IntoView {
                 </ul>
             </section>
 
-            <p class="text-lg font-semibold text-green-800">"Niveau global : Acquis ✅"</p>
+            <p class="text-lg font-semibold text-theme-success">"Niveau global : Acquis ✅"</p>
         </main>
     }
 }

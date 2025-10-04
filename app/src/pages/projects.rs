@@ -14,12 +14,12 @@ pub fn ProjectPage() -> impl IntoView {
     .collect::<Vec<_>>();
 
     view! {
-        <div class="bg-gray-50 min-h-screen py-12 px-6">
+        <div class="bg-theme-primary min-h-screen py-12 px-6">
             <div class="max-w-5xl mx-auto text-center mb-6">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-theme-primary mb-4">
                     "Creusons dans mon atelier!"
                 </h1>
-                <p class="text-lg text-gray-600 mb-6">
+                <p class="text-lg text-theme-secondary mb-6">
                     "Voici quelques projets sur lesquels j'ai travaillé. Filtrez-les par technologie !"
                 </p>
 

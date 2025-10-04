@@ -128,8 +128,8 @@ pub fn GitHubContributions(username: String, token: Option<String>) -> impl Into
     view! {
         <div class="w-full">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-bold text-zinc-800 flex items-center gap-2">
-                    <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" class="text-zinc-700">
+                <h3 class="text-2xl font-bold text-theme-primary flex items-center gap-2">
+                    <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" class="text-theme-secondary">
                         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
                     </svg>
                     "Mes contributions GitHub"
@@ -247,14 +247,14 @@ pub fn GitHubContributions(username: String, token: Option<String>) -> impl Into
                     let prs = pull_requests.get();
                     if prs.is_empty() {
                         view! {
-                            <div class="text-center py-12 text-zinc-500">
+                            <div class="text-center py-12 text-theme-secondary">
                                 <p>"Aucune pull request trouvée pour ce compte."</p>
                             </div>
                         }.into_any()
                     } else {
                         view! {
                             <div class="space-y-4">
-                                <div class="text-sm text-zinc-600 mb-4">
+                                <div class="text-sm text-theme-secondary mb-4">
                                     {format!("{} pull requests trouvées (100 max)", prs.len())}
                                 </div>
                                 <div class="grid gap-4">
@@ -263,7 +263,7 @@ pub fn GitHubContributions(username: String, token: Option<String>) -> impl Into
                                         let merged_date = pr.merged_at.as_ref().map(|d| format_date(d));
 
                                         view! {
-                                            <div class="bg-white border border-zinc-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                                            <div class="bg-theme-primary border border-zinc-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                                                 <div class="flex items-start justify-between mb-3">
                                                     <div class="flex items-center gap-2">
                                                         {match pr.state.as_str() {
@@ -284,24 +284,24 @@ pub fn GitHubContributions(username: String, token: Option<String>) -> impl Into
                                                                 </span>
                                                             }.into_any(),
                                                             _ => view! {
-                                                                <span class="px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                                                                <span class="px-2 py-1 rounded-full text-xs font-medium bg-theme-tag text-theme-tag">
                                                                     {pr.state.clone()}
                                                                 </span>
                                                             }.into_any(),
                                                         }}
                                                     </div>
-                                                    <div class="text-sm text-zinc-500">
+                                                    <div class="text-sm text-theme-secondary">
                                                         {created_date}
                                                     </div>
                                                 </div>
 
-                                                <h4 class="font-semibold text-zinc-800 mb-2 leading-tight">
+                                                <h4 class="font-semibold text-theme-primary mb-2 leading-tight">
                                                     <a href={pr.url.clone()} target="_blank" class="hover:text-indigo-600 transition-colors">
                                                         {pr.title}
                                                     </a>
                                                 </h4>
 
-                                                <div class="flex items-center justify-between text-sm text-zinc-600">
+                                                <div class="flex items-center justify-between text-sm text-theme-secondary">
                                                     <div class="flex items-center gap-2">
                                                         <span class="font-medium">{"📁"}</span>
                                                         <a href={pr.repo_url.clone()} target="_blank" class="hover:text-indigo-600 transition-colors">
@@ -311,7 +311,7 @@ pub fn GitHubContributions(username: String, token: Option<String>) -> impl Into
 
                                                     <div class="flex items-center gap-4">
                                                         {merged_date.map(|date| view! {
-                                                            <span class="text-zinc-500">
+                                                            <span class="text-theme-secondary">
                                                                 "Merged: " {date}
                                                             </span>
                                                         })}

@@ -4,18 +4,18 @@ use leptos::prelude::*;
 pub fn TicketingPage() -> impl IntoView {
     view! {
         <main class="max-w-5xl mx-auto px-6 py-12">
-            <h1 class="text-4xl font-bold mb-4">"Outil de ticketing — Alternance ADULLACT"</h1>
-            <p class="mb-4 italic">"Projet professionnel — 6 mois"</p>
-            <p class="mb-2">
-                "Développement en solo avec un chef de projet. J’ai géré la conception, l’architecture, le back et front-end, ainsi que les tests."
+            <h1 class="text-4xl font-bold text-theme-primary mb-4">"Outil de ticketing — Alternance ADULLACT"</h1>
+            <p class="mb-4 italic text-theme-secondary">"Projet professionnel — 6 mois"</p>
+            <p class="mb-2 text-theme-secondary">
+                "Développement en solo avec un chef de projet. J'ai géré la conception, l'architecture, le back et front-end, ainsi que les tests."
             </p>
-            <p class="mb-6">
+            <p class="mb-6 text-theme-secondary">
                 "Méthode agile, suivis réguliers, démonstrations, prise en compte de retours, et documentation complète."
             </p>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 2 — Optimiser, Sélectionner les algorithme adéquats pour répondre à un problème donné"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800">
+                <h2 class="text-2xl font-semibold text-theme-success mb-2">"Compétence 2 — Optimiser, Sélectionner les algorithme adéquats pour répondre à un problème donné"</h2>
+                <ul class="list-disc list-inside space-y-2 text-theme-primary">
                     <li>
                         <strong>"AC 1 — Choisir des structures de données complexes adaptées au problème :"</strong>
                         "L’architecture de l’outil a été pensée pour séparer les entités principales : tickets, utilisateurs, services… J’ai conçu des classes Ruby modélisant précisément les objets métier, en respectant les principes SOLID, facilitant leur évolution."
@@ -35,8 +35,8 @@ pub fn TicketingPage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 4 — Gérer, Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800">
+                <h2 class="text-2xl font-semibold text-theme-success mb-2">"Compétence 4 — Gérer, Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité"</h2>
+                <ul class="list-disc list-inside space-y-2 text-theme-primary">
                     <li>
                         <strong>"AC 2 — Assurer la confidentialité des données :" </strong>
                         "Connexions sécurisées, contrôle des accès, données sensibles protégées. Les identifiants des agents étaient stockés de manière sécurisée, et les permissions finement gérées."
@@ -46,8 +46,8 @@ pub fn TicketingPage() -> impl IntoView {
             </section>
 
             <section class="mb-8">
-                <h2 class="text-2xl font-semibold text-green-700 mb-2">"Compétence 5 — Conduire, Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs"</h2>
-                <ul class="list-disc list-inside space-y-2 text-zinc-800">
+                <h2 class="text-2xl font-semibold text-theme-success mb-2">"Compétence 5 — Conduire, Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs"</h2>
+                <ul class="list-disc list-inside space-y-2 text-theme-primary">
                     <li>
                         <strong>"AC 1 — Identifier les processus présents dans une organisation :" </strong>
                         "Une analyse des flux internes a été effectuée pour bien comprendre les besoins des utilisateurs et leurs contraintes métier."
@@ -67,7 +67,7 @@ pub fn TicketingPage() -> impl IntoView {
                 </ul>
             </section>
 
-            <p class="text-lg font-semibold text-green-800">"Niveau global sur les compétences mobilisées : Acquis ✅"</p>
+            <p class="text-lg font-semibold text-theme-success">"Niveau global sur les compétences mobilisées : Acquis ✅"</p>
         </main>
     }
 }
