@@ -8,12 +8,7 @@ variables:
 # Build the portfolio application
 rust_build:
   stage: build
-  image: rust:latest
-  before_script:
-    - rustup toolchain install nightly --allow-downgrade
-    - rustup default nightly
-    - rustup target add wasm32-unknown-unknown
-    - cargo install trunk
+  image: tonguechaude/portfolio
   script:
     - trunk build --release
     - cd dist/
