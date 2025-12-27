@@ -14,9 +14,6 @@ pub fn RecentContributions(username: String, token: Option<String>) -> impl Into
     Effect::new({
         let username = username.clone();
         let token = token.clone();
-        let pull_requests = pull_requests;
-        let loading = loading;
-        let error = error;
         let excluded_repos = excluded_repos.clone();
         let excluded_titles = excluded_titles.clone();
 
@@ -67,7 +64,7 @@ pub fn RecentContributions(username: String, token: Option<String>) -> impl Into
                                                 .replace("repos/", "");
                                             let repo_name = repo_url
                                                 .split('/')
-                                                .last()
+                                                .next_back()
                                                 .unwrap_or("unknown")
                                                 .to_string();
 

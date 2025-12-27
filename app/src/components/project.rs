@@ -1,4 +1,4 @@
-use crate::data::data::get_projects;
+use crate::data::projects::get_projects;
 use leptos::prelude::*;
 
 #[component]

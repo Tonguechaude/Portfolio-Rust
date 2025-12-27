@@ -17,10 +17,10 @@ rustup target add wasm32-unknown-unknown
 To develop your Leptos CSR project, running
 
 ```sh
-trunk serve --port 3000 --open
+cargo leptos watch
 ```
 
-will open your app in your default browser at `http://localhost:3000`.
+will start a development server at `http://localhost:3000` with hot-reload enabled.
 
 
 ## Deploying your Leptos CSR project
@@ -28,16 +28,13 @@ will open your app in your default browser at `http://localhost:3000`.
 To build a Leptos CSR app for release, use the command
 
 ```sh
-trunk build --release
+cargo leptos build --release
 ```
 
-This will output the files necessary to run your app into the `dist` folder; you can then use any static site host to serve these files.
+This will output the files necessary to run your app into the `target/site/` folder; you can then use any static site host to serve these files.
 
 For further information about hosting Leptos CSR apps, please refer to [the Leptos Book chapter on deployment available here][deploy-csr].
 
 [Leptos]: https://github.com/leptos-rs/leptos
-
-[Trunk]: https://github.com/trunk-rs/trunk
-[Trunk-instructions]: https://trunkrs.dev/assets/
-
+[cargo-leptos]: https://github.com/leptos-rs/cargo-leptos
 [deploy-csr]: https://book.leptos.dev/deployment/csr.html

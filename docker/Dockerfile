@@ -5,8 +5,8 @@ RUN rustup toolchain install nightly --allow-downgrade && \
   rustup default nightly && \
   rustup target add wasm32-unknown-unknown
 
-# Install trunk
-RUN cargo install trunk
+# Install cargo-leptos
+RUN cargo install --locked cargo-leptos
 
 # Keep container running for CI jobs
 CMD ["bash"]

@@ -10,13 +10,13 @@ rust_build:
   stage: build
   image: tonguechaude/portfolio
   script:
-    - trunk build --release
-    - cd dist/
-    - tar czf ../portfolio-rust.tar.gz .
+    - cargo leptos build --release
+    - cd target/site/
+    - tar czf ../../portfolio-rust.tar.gz .
   artifacts:
     paths:
       - portfolio-rust.tar.gz
-      - dist/
+      - target/site/
     expire_in: '3 months'
   rules:
     - if: $CI_PIPELINE_SOURCE == "push"
