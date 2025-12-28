@@ -53,10 +53,25 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     view! {
-        <Html attr:lang="en" attr:dir="ltr" />
-        <Title text="Chez Tonguechaude" />
+        <Html attr:lang="fr" attr:dir="ltr" />
+        <Title text="Chez Evan" />
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        // SEO Meta tags
+        <Meta name="description" content="Portfolio d'Evan Challias, développeur systèmes et cybersécurité plutot DevOps. Alternant chez ADULLACT, contributeur open source actif." />
+        <Meta name="keywords" content="Evan Challias, développeur Rust, administrateur système, cybersécurité, DevOps, Linux, Puppet, open source, Leptos, WebAssembly" />
+        <Meta name="author" content="Evan Challias" />
+        <Meta name="robots" content="index, follow" />
+        <Link rel="canonical" href="https://tonguechaude.fr" />
+
+        // Open Graph (pour LinkedIn, Mastodon, Discord, etc.)
+        <Meta property="og:type" content="website" />
+        <Meta property="og:url" content="https://tonguechaude.fr" />
+        <Meta property="og:title" content="Chez Evan" />
+        <Meta property="og:description" content="Portfolio d'Evan Challias, développeur systèmes et cybersécurité spécialisé en Rust, Linux et DevOps." />
+        <Meta property="og:image" content="https://tonguechaude.fr/img/preview.png" />
+        <Meta property="og:locale" content="fr_FR" />
 
         <div class="min-h-screen flex flex-col bg-theme-primary">
             <Router>
