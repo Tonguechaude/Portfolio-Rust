@@ -55,7 +55,6 @@ pub fn HomePage() -> impl IntoView {
                 <section class="mb-16">
                     <RecentContributions
                         username="tonguechaude".to_string()
-                        token=None
                     />
                 </section>
             </main>

@@ -8,6 +8,7 @@ use leptos_meta::*;
 mod components;
 mod data;
 mod pages;
+mod utils;
 
 // Top-Level pages
 use crate::pages::apprentissage::comptoir::ComptoirPage;

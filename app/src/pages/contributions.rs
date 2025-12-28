@@ -18,7 +18,6 @@ pub fn ContributionsPage() -> impl IntoView {
                 <section>
                     <GitHubContributions
                         username="tonguechaude".to_string()
-                        token=None
                     />
                 </section>
             </main>

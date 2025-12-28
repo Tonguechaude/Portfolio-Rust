@@ -1,11 +1,11 @@
-use crate::data::github::{GitHubSearchResponse, SimplifiedPR};
+use crate::data::github::SimplifiedPR;
+use crate::utils::github_api;
 use leptos::prelude::*;
 use leptos::task::spawn_local;
 
 #[component]
-pub fn RecentContributions(username: String, token: Option<String>) -> impl IntoView {
+pub fn RecentContributions(username: String) -> impl IntoView {
     let excluded_repos: Vec<&str> = vec!["pendu.rs", "puppet-epel"];
-    let excluded_titles: Vec<&str> = vec![];
 
     let pull_requests = RwSignal::new(Vec::<SimplifiedPR>::new());
     let loading = RwSignal::new(true);
@@ -13,103 +13,23 @@ pub fn RecentContributions(username: String, token: Option<String>) -> impl Into
 
     Effect::new({
         let username = username.clone();
-        let token = token.clone();
         let excluded_repos = excluded_repos.clone();
-        let excluded_titles = excluded_titles.clone();
 
         move |_| {
             spawn_local({
                 let username = username.clone();
-                let _token = token.clone();
-                let pull_requests = pull_requests;
-                let loading = loading;
-                let error = error;
                 let excluded_repos = excluded_repos.clone();
-                let excluded_titles = excluded_titles.clone();
 
                 async move {
                     loading.set(true);
                     error.set(None);
 
-                    let client = reqwest::Client::new();
-                    let url = format!(
-                        "https://api.github.com/search/issues?q=type:pr+author:{}&sort=created&order=desc&per_page=100",
-                        username
-                    );
-
-                    let request_builder = client
-                        .get(&url)
-                        .header("User-Agent", "Portfolio-Rust/1.0")
-                        .header("Accept", "application/vnd.github.v3+json");
-
-                    match request_builder.send().await {
-                        Ok(response) => {
-                            let status = response.status();
-                            let text = response.text().await.unwrap_or_default();
-
-                            if !status.is_success() {
-                                error.set(Some(format!("GitHub API error ({}): {}", status, text)));
-                                return;
-                            }
-
-                            match serde_json::from_str::<GitHubSearchResponse>(&text) {
-                                Ok(search_response) => {
-                                    let pr_events: Vec<SimplifiedPR> = search_response
-                                        .items
-                                        .into_iter()
-                                        .filter_map(|pr| {
-                                            let repo_url = pr
-                                                .repository_url
-                                                .replace("api.", "")
-                                                .replace("repos/", "");
-                                            let repo_name = repo_url
-                                                .split('/')
-                                                .next_back()
-                                                .unwrap_or("unknown")
-                                                .to_string();
-
-                                            if excluded_repos.contains(&repo_name.as_str()) {
-                                                return None;
-                                            }
-
-                                            if excluded_titles
-                                                .iter()
-                                                .any(|excluded| pr.title.contains(excluded))
-                                            {
-                                                return None;
-                                            }
-
-                                            // only closed PR (= generally merged)
-                                            if pr.state.to_lowercase() != "closed" {
-                                                return None;
-                                            }
-
-                                            Some(SimplifiedPR {
-                                                title: pr.title,
-                                                url: pr.html_url,
-                                                state: "MERGED".to_string(), // Assume closed = merged
-                                                created_at: pr.created_at,
-                                                merged_at: pr.merged_at,
-                                                repo_name,
-                                                repo_url,
-                                            })
-                                        })
-                                        .take(3) // limit 3 PR
-                                        .collect();
-
-                                    pull_requests.set(pr_events);
-                                }
-                                Err(e) => {
-                                    error.set(Some(format!(
-                                        "Erreur de parsing JSON: {} - Réponse: {}",
-                                        e,
-                                        text.chars().take(200).collect::<String>()
-                                    )));
-                                }
-                            }
+                    match github_api::fetch_recent_merged_prs(&username, &excluded_repos, 3).await {
+                        Ok(prs) => {
+                            pull_requests.set(prs);
                         }
                         Err(e) => {
-                            error.set(Some(format!("Erreur de requête: {}", e)));
+                            error.set(Some(e));
                         }
                     }
 
