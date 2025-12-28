@@ -1,0 +1,206 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tikz}
+
+% Définition des couleurs
+\definecolor{mainblue}{RGB}{41, 128, 185}
+\definecolor{accentorange}{RGB}{230, 126, 34}
+\definecolor{darkgray}{RGB}{52, 73, 94}
+\definecolor{lightgray}{RGB}{236, 240, 241}
+
+% Configuration des liens
+\hypersetup{
+    colorlinks=true,
+    linkcolor=mainblue,
+    urlcolor=mainblue,
+    allcolors=mainblue,
+}
+
+% Configuration des sections
+\titleformat{\section}{\Large\bfseries\color{mainblue}}{}{0em}{}
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+\titleformat{\subsection}{\large\bfseries\color{darkgray}}{}{0em}{}
+\titlespacing{\subsection}{0pt}{3pt}{2pt}
+
+% Commande personnalisée pour section avec ligne
+\newcommand{\sectionline}{\vspace{-2pt}{\color{accentorange}\hrule height 2pt}\vspace{3pt}}
+
+% Pas d'indentation
+\setlength{\parindent}{0pt}
+\setlength{\columnsep}{1cm}
+
+% Configuration des listes
+\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=*, label=\textcolor{accentorange}{$\bullet$}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ============ EN-TÊTE COLORÉ ============
+\begin{tikzpicture}[remember picture,overlay]
+    \fill[mainblue] (current page.north west) rectangle ([yshift=-4.2cm]current page.north east);
+\end{tikzpicture}
+
+\vspace{0.5cm}
+
+{\color{white}\Huge\textbf{Evan Challias}}
+
+\vspace{2mm}
+
+{\color{lightgray}\large Développeur Systèmes \& Cybersécurité | BUT Informatique 3\textsuperscript{e} année}
+
+\vspace{3mm}
+
+{\color{white}\small
+\begin{tabular}{@{}l l l@{}}
+\faMapMarker* \quad Montpellier (34) & \faMobile* \quad 06 19 67 05 48 & \faGlobe \quad tonguechaude.fr \\
+\faEnvelope \quad evan.challias@tonguechaude.fr & \faGithub \quad Tonguechaude & \faLinkedin \quad evan-c
+\end{tabular}
+}
+
+\vspace{5mm}
+
+% ============ Two columns ============
+\begin{tikzpicture}[remember picture,overlay]
+    \fill[lightgray!30] (current page.north west) ++(0,-4.2cm) rectangle ([yshift=0.5cm]current page.south west) ++ (8.5cm,0);
+    \fill[accentorange] (current page.north west) ++(0,-4.2cm) rectangle ([yshift=0.5cm]current page.south west) ++ (0.3cm,0);
+\end{tikzpicture}
+
+\begin{multicols}{2}
+
+% ========== Left Column ==========
+
+\section*{Compétences}
+\sectionline
+
+\subsection*{Langages}
+\faCode \quad \textbf{Avancé :} Rust, Java, Shell/Bash, C, SQL\\
+\textbf{Intermédiaire :} Python, Ruby, PHP, HTML/CSS/JS
+
+\subsection*{DevOps}
+\faDocker \quad Puppet, Ansible, Docker, Docker Compose, GitLab CI, GitHub Actions
+
+\subsection*{Systèmes}
+\faServer \quad Linux (Arch, Debian, Ubuntu), Nginx, Apache, PostgreSQL, MariaDB
+
+\subsection*{Web}
+\faGlobe \quad Leptos (Rust/WASM), Rocket, Axum, HTMX, Spring, Tailwind CSS
+
+\subsection*{Outils}
+\faTools \quad Git, Prometheus, Grafana, Neovim
+
+\section*{Cybersécurité}
+\sectionline
+
+{\color{darkgray}\faFlag} \textbf{Root-Me :} 915 points\\
+{\color{darkgray}\faFlag} \textbf{TryHackMe :} 6 CTF\\
+{\color{darkgray}\faFlag} \textbf{HackTheBox :} Easy/Medium
+
+\vspace{1mm}
+{\small Pentest web, analyse réseau (Wireshark, nmap), reverse engineering}
+
+\section*{Formation}
+\sectionline
+
+\faGraduationCap \quad \textbf{2022--2025}\\
+\textbf{BUT Informatique}\\
+IUT Montpellier-Sète\\
+{\small Réalisation d'Applications}\\
+{\small \textit{2\textsuperscript{e} et 3\textsuperscript{e} année en alternance}}
+
+\vspace{2mm}
+
+\faGraduationCap \quad \textbf{2023}\\
+\textbf{Bac STI2D -- SIN}\\
+Lycée Les Catalins\\
+{\small Mention Très Bien}
+
+\section*{Langues}
+\sectionline
+
+\faLanguage \quad \textbf{Français :} Natif\\
+\textbf{Anglais :} B2\\
+\textbf{Espagnol :} A2-B1
+
+\columnbreak
+
+% ========== Right Column ==========
+
+\section*{Expérience}
+\sectionline
+
+\subsection*{Alternant Admin-Sys \& Réseaux}
+\textbf{ADULLACT} -- Montpellier \hfill \textit{Juil. 2024 -- Présent}
+
+\begin{itemize}
+\item Administration infrastructure Debian, monitoring
+\item Développement modules Puppet pour automatisation déploiement
+\item Création d'outils Rust/Shell pour optimisation workflows
+\item Développement système ticketing web (Ruby)
+\item Support technique collectivités territoriales
+\item Participation gouvernance projets open source
+\end{itemize}
+
+\section*{Open Source}
+\sectionline
+
+\faGithub \quad Contributeur actif à plusieurs projets libres\\
+{\small \href{https://tonguechaude.fr/contributions}{tonguechaude.fr/contributions}}
+
+\begin{itemize}
+\item \textbf{Ferrumc} : Minecraft Serveur Rust -- Bug fixes, Fonctionnalités
+\item \textbf{Dmarc-SRG} : Webapp pour visualiser des rapports Dmarc -- Génération Markdown
+\item \textbf{Puppet-editor-service} : Puppet LSP -- Bug fixes
+\item \textbf{Zed} : Rust IDE -- Bug fixes, Implementation de l'extension Puppet
+\item \textbf{Openvox/Puppet modules} :  Application module -- Bug fixes, Fonctionnalités
+\end{itemize}
+
+{\small\textit{\color{darkgray}Pull requests mergées dans des projets utilisés par des milliers de développeurs}}
+
+\section*{Projets}
+\sectionline
+
+\subsection*{Portfolio Web Full-Stack}
+\textbf{Rust + Leptos + WASM} \hfill \textit{2024}\\
+{\small \href{https://tonguechaude.fr}{tonguechaude.fr}}
+
+\begin{itemize}
+\item Application web moderne en Rust avec WebAssembly
+\item Architecture workspace multi-crates
+\item Intégration GitHub API, CI/CD GitLab
+\item Design responsive Tailwind CSS v4, dark mode
+\end{itemize}
+
+\subsection*{Serveur Personnel Auto-hébergé}
+\textbf{Linux + Docker Rootless + Puppet} \hfill \textit{2024}
+
+\begin{itemize}
+\item Hébergement Nextcloud, Portfolio, GitLab Runner
+\item Automatisation Puppet, monitoring Prometheus/Grafana
+\item Sécurisation réseau (fail2ban, firewall, reverse proxy)
+\item Backup automatisé (Restic)
+\end{itemize}
+
+\subsection*{Applications Web \& Systèmes}
+\textbf{Rust, Java} \hfill \textit{2023--2024}
+
+\begin{itemize}
+\item \textbf{VoteOMatic} : Système de vote sécurisé (Java, Spring)
+\item \textbf{Robot Autonome} : C embarqué, Arduino/ESP32
+\end{itemize}
+
+\end{multicols}
+
+\end{document}
