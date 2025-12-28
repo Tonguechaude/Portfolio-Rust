@@ -81,7 +81,7 @@ async fn get_static_file(uri: Uri, root: &str) -> Result<Response<Body>, (Status
     match ServeDir::new(root).oneshot(req).await {
         Ok(res) => {
             let response = res.map(Body::new);
-            // Si le fichier n'existe pas (404), on retourne une erreur pour servir index.html
+            // SPA compliant
             if response.status() == StatusCode::NOT_FOUND {
                 Err((StatusCode::NOT_FOUND, format!("File not found: {}", uri)))
             } else {
