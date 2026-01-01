@@ -47,6 +47,81 @@ pub fn HomePage() -> impl IntoView {
 
                 <section class="mb-16">
                     <h2 class="text-3xl font-bold text-theme-primary mb-6">
+                        "Actuellement"
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        // Contribution active
+                        <a
+                            href="https://github.com/ferrumc-rs/ferrumc"
+                            target="_blank"
+                            class="group relative bg-theme-nav border border-zinc-200 dark:border-zinc-700 rounded-2xl p-6 hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
+                        >
+                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="p-3 bg-orange-100 dark:bg-orange-900/30 rounded-xl">
+                                        <span class="text-2xl">"🔥"</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-theme-primary">"Je contribue à"</h3>
+                                        <p class="text-sm text-theme-secondary">"Open Source"</p>
+                                    </div>
+                                </div>
+                                <p class="text-orange-500 dark:text-orange-400 font-semibold text-lg">"Ferrumc"</p>
+                                <p class="text-sm text-theme-secondary mt-2">
+                                    "Serveur Minecraft haute performance écrit en Rust"
+                                </p>
+                            </div>
+                        </a>
+
+                        // Apprentissage
+                        <a
+                            href="https://bevyengine.org"
+                            target="_blank"
+                            class="group relative bg-theme-nav border border-zinc-200 dark:border-zinc-700 rounded-2xl p-6 hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
+                        >
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-xl">
+                                        <span class="text-2xl">"📚"</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-theme-primary">"J'apprends"</h3>
+                                        <p class="text-sm text-theme-secondary">"Game Dev"</p>
+                                    </div>
+                                </div>
+                                <p class="text-purple-500 dark:text-purple-400 font-semibold text-lg">"Bevy Engine"</p>
+                                <p class="text-sm text-theme-secondary mt-2">
+                                    "Moteur de jeu data-driven en Rust"
+                                </p>
+                            </div>
+                        </a>
+
+                        // Objectif
+                        <div class="group relative bg-theme-nav border border-zinc-200 dark:border-zinc-700 rounded-2xl p-6 hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden cursor-default">
+                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="p-3 bg-green-100 dark:bg-green-900/30 rounded-xl">
+                                        <span class="text-2xl">"🎯"</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-theme-primary">"Mon objectif"</h3>
+                                        <p class="text-sm text-theme-secondary">"Philosophie"</p>
+                                    </div>
+                                </div>
+                                <p class="text-green-500 dark:text-green-400 font-semibold text-lg">"Arrêter de réinventer la roue"</p>
+                                <p class="text-sm text-theme-secondary mt-2">
+                                    "Utiliser plus de libs existantes, contribuer plutôt que recréer"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-16">
+                    <h2 class="text-3xl font-bold text-theme-primary mb-6">
                         "🛠️ Mes projets récents"
                     </h2>
                     <Projects selected_tags=selected_tags />
