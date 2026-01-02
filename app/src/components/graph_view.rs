@@ -2,6 +2,7 @@ use crate::data::stack::{get_stack, TechCategory};
 use leptos::prelude::*;
 use std::collections::HashMap;
 
+#[allow(dead_code)]
 #[derive(Clone)]
 struct Node {
     name: String,
@@ -61,8 +62,8 @@ pub fn GraphView(
         .collect();
 
     // Positionner les nœuds en spirale/cluster par catégorie
-    let center_x = 400.0;
-    let center_y = 320.0;
+    let _center_x = 400.0;
+    let _center_y = 320.0;
 
     // Grouper par catégorie et positionner
     let mut nodes: Vec<Node> = Vec::new();

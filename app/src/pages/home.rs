@@ -29,10 +29,10 @@ pub fn HomePage() -> impl IntoView {
                             {r#"Actuellement en alternance à l’ADULLACT, je contribue à des projets open source, enrichissant mes connaissances techniques dans un cadre professionnel stimulant."#}
                         </p>
                         <p>
-                            {r#"Je gère également un serveur personnel sur Raspberry Pi, hébergeant entre autres ce portfolio et un serveur Nextcloud. L’automatisation avec Puppet me permet d’optimiser et de sécuriser cet environnement."#}
+                            {r#"Je gère également un serveur personnel sur Raspberry Pi, hébergeant entre autres ce portfolio et d'autre services que j'utilise. L’automatisation avec Openvox (Fork communautaire de Puppet) me permet d’optimiser et de sécuriser cet environnement."#}
                         </p>
                         <p>
-                            {r#"Mon intérêt pour la cybersécurité s’étend à la gestion des risques et à la sensibilisation des utilisateurs. Je vise à terme un rôle de RSSI, combinant expertise technique et stratégie de sécurité."#}
+                            {r#"Mon intérêt pour la cybersécurité s’étend à la gestion des risques et à la sensibilisation des utilisateurs. Je vise à terme un rôle de RSSI, combinant expertise technique et stratégie de sécurité. Pour y parvenir j'envisage post BUT de continuer avec un Master de cybersécurité en alternance toujours à l'ADULLACT"#}
                         </p>
                         <p>
                             {r#"Curieux et engagé, je reste ouvert aux opportunités mêlant innovation technologique, sécurité et impact social via le logiciel libre."#}
