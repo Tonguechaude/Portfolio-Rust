@@ -5,6 +5,8 @@ pub struct Project {
     pub tags: &'static [&'static str],
     pub image: &'static str,
     pub link: &'static str,
+    pub gradient_from: &'static str,
+    pub gradient_to: &'static str,
 }
 
 pub fn get_projects() -> Vec<Project> {
@@ -15,6 +17,8 @@ pub fn get_projects() -> Vec<Project> {
             tags: &["Rust", "TUI"],
             image: "/img/cuberust.png",
             link: "https://github.com/Tonguechaude/cube.rs",
+            gradient_from: "from-emerald-500/10",
+            gradient_to: "to-cyan-500/10",
         },
         Project {
             title: "Jeu de la vie en Rust avec Bevy",
@@ -22,6 +26,8 @@ pub fn get_projects() -> Vec<Project> {
             tags: &["Rust", "GUI", "WASM", "Jeu", "⭐"],
             image: "/img/gol.png",
             link: "https://github.com/Tonguechaude/GOL.rs",
+            gradient_from: "from-orange-500/10",
+            gradient_to: "to-rose-500/10",
         },
         Project {
             title: "Portfolio Tonguechaude",
@@ -29,6 +35,8 @@ pub fn get_projects() -> Vec<Project> {
             tags: &["Rust", "Web", "Tailwind", "WASM", "⭐"],
             image: "/img/portfolio-rust.png",
             link: "https://github.com/Tonguechaude/Portfolio-rust",
+            gradient_from: "from-violet-500/10",
+            gradient_to: "to-purple-500/10",
         },
         Project {
             title: "Aquatui",
@@ -36,6 +44,8 @@ pub fn get_projects() -> Vec<Project> {
             tags: &["Rust", "TUI", "⭐"],
             image: "/img/aquatui.png",
             link: "https://github.com/Tonguechaude/Aquatui",
+            gradient_from: "from-cyan-500/10",
+            gradient_to: "to-blue-500/10",
         },
         Project {
             title: "Convertisseur Rust",
@@ -43,6 +53,8 @@ pub fn get_projects() -> Vec<Project> {
             tags: &["Rust", "Docker", "TUI"],
             image: "/img/convertisseur-rust.png",
             link: "https://github.com/Tonguechaude/Convertisseur-Rust",
+            gradient_from: "from-blue-500/10",
+            gradient_to: "to-orange-500/10",
         },
         Project {
             title: "2048 Java",
@@ -50,6 +62,8 @@ pub fn get_projects() -> Vec<Project> {
             tags: &["Java", "GUI"],
             image: "/img/2048.png",
             link: "https://github.com/Tonguechaude/2048",
+            gradient_from: "from-amber-500/10",
+            gradient_to: "to-orange-500/10",
         },
     ]
 }
