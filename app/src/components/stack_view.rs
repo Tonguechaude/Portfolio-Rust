@@ -3,8 +3,8 @@ use leptos::prelude::*;
 
 #[component]
 pub fn StackView(
-    selected_tags: RwSignal<Vec<String>>,
-    #[prop(into)] on_tech_click: Callback<String>,
+    _selected_tags: RwSignal<Vec<String>>,
+    #[prop(into)] _on_tech_click: Callback<String>,
 ) -> impl IntoView {
     let stack = get_stack();
 
@@ -34,10 +34,10 @@ pub fn StackView(
                             {techs.into_iter().map(|tech| {
                                 let tech_name = tech.name.to_string();
                                 let tech_name_click = tech_name.clone();
-                                let on_click = on_tech_click.clone();
+                                let on_click = _on_tech_click.clone();
 
                                 let is_selected = Memo::new(move |_| {
-                                    selected_tags.get().contains(&tech_name.clone())
+                                    _selected_tags.get().contains(&tech_name.clone())
                                 });
 
                                 view! {

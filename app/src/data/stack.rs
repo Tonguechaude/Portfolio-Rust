@@ -16,6 +16,7 @@ pub enum TechCategory {
     Tool,
 }
 
+#[allow(dead_code)]
 impl TechCategory {
     pub fn label(&self) -> &'static str {
         match self {
