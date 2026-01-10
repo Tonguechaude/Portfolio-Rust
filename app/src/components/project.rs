@@ -55,7 +55,7 @@ pub fn Projects(selected_tags: RwSignal<Vec<String>>) -> impl IntoView {
                                     {
                                         p.tags.iter().map(|tag| {
                                             view! {
-                                                <span class="text-xs bg-zinc-100 dark:bg-zinc-800 text-theme-secondary px-3 py-1 rounded-full border border-zinc-200 dark:border-zinc-700">
+                                                <span class="text-xs bg-theme-tag text-theme-tag px-3 py-1 rounded-full border border-zinc-200 dark:border-zinc-700">
                                                     {*tag}
                                                 </span>
                                             }
