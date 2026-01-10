@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 use crate::data::stack::{get_stack, TechCategory};
 use leptos::prelude::*;
 
