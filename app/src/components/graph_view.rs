@@ -9,8 +9,6 @@ struct Node {
     x: f32,
     y: f32,
     icon: String,
-    color: String,
-    category: TechCategory,
 }
 
 #[derive(Clone)]
@@ -61,10 +59,6 @@ pub fn GraphView(
         })
         .collect();
 
-    // Positionner les nœuds en spirale/cluster par catégorie
-    let _center_x = 400.0;
-    let _center_y = 320.0;
-
     // Grouper par catégorie et positionner
     let mut nodes: Vec<Node> = Vec::new();
 
@@ -96,8 +90,6 @@ pub fn GraphView(
                     x: cx + radius * angle.cos(),
                     y: cy + radius * angle.sin(),
                     icon: tech.icon.to_string(),
-                    color: tech.color.to_string(),
-                    category: category.clone(),
                 });
             }
         }

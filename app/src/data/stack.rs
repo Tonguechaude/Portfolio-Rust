@@ -18,6 +18,7 @@ pub enum TechCategory {
 
 #[allow(dead_code)]
 impl TechCategory {
+    #[allow(unused)]
     pub fn label(&self) -> &'static str {
         match self {
             TechCategory::Language => "Langages",
