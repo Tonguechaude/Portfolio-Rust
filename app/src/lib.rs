@@ -17,7 +17,10 @@ use crate::pages::apprentissage::service_desk::TicketingPage;
 use crate::pages::apprentissages::ApprentissagePage;
 use crate::pages::article::comptoir::ComptoirArticlePage;
 use crate::pages::article::convertisseur_rust::ConvertisseurRustArticlePage;
+use crate::pages::article::ferrumc::FerrumcArticlePage;
 use crate::pages::article::gol_java::GolJavaArticlePage;
+use crate::pages::article::portfolio_rust::PortfolioRustArticlePage;
+use crate::pages::article::rustic::RusticArticlePage;
 use crate::pages::article::voteomatic::VoteOmaticArticlePage;
 use crate::pages::articles::ArticlesPage;
 use crate::pages::contributions::ContributionsPage;
@@ -90,6 +93,9 @@ pub fn App() -> impl IntoView {
                         <Route path=path!("/apprentissages/ticketing") view=TicketingPage />
                         <Route path=path!("/articles/voteomatic") view=VoteOmaticArticlePage />
                         <Route path=path!("/articles/convertisseur_rust") view=ConvertisseurRustArticlePage />
+                        <Route path=path!("/articles/portfolio_rust") view=PortfolioRustArticlePage />
+                        <Route path=path!("/articles/ferrumc") view=FerrumcArticlePage />
+                        <Route path=path!("/articles/rustic") view=RusticArticlePage />
                     </ParentRoute>
 
                     <ParentRoute path=path!("/*any") view=BareLayout>

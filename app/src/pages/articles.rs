@@ -15,6 +15,39 @@ pub fn ArticlesPage() -> impl IntoView {
                 </section>
 
                 <section>
+                    <a href="/articles/portfolio_rust">
+                        <article class="hover:shadow-md transition mb-8 p-6 border rounded-lg shadow-sm bg-theme-nav">
+                            <h3 class="text-2xl font-bold text-theme-primary mb-2">
+                                "Portfolio en Rust avec Leptos"
+                            </h3>
+                            <p class="italic text-theme-secondary mb-4">
+                                "Création d'un site statique performant avec Leptos, déploiement automatisé avec GitLab CI/CD sur VPS"
+                            </p>
+                        </article>
+                    </a>
+
+                    <a href="/articles/ferrumc">
+                        <article class="hover:shadow-md transition mb-8 p-6 border rounded-lg shadow-sm bg-theme-nav">
+                            <h3 class="text-2xl font-bold text-theme-primary mb-2">
+                                "Contributions à FerruMC"
+                            </h3>
+                            <p class="italic text-theme-secondary mb-4">
+                                "Serveur Minecraft en Rust, apprentissage de Bevy ECS, collaboration open-source internationale"
+                            </p>
+                        </article>
+                    </a>
+
+                    <a href="/articles/rustic">
+                        <article class="hover:shadow-md transition mb-8 p-6 border rounded-lg shadow-sm bg-theme-nav">
+                            <h3 class="text-2xl font-bold text-theme-primary mb-2">
+                                "Rustic - Logiciel de Sauvegarde"
+                            </h3>
+                            <p class="italic text-theme-secondary mb-4">
+                                "Projet d'école en équipe : création d'un outil de backup CLI en Rust inspiré de Restic"
+                            </p>
+                        </article>
+                    </a>
+
                     <a href="/articles/voteomatic">
                         <article class="hover:shadow-md transition mb-8 p-6 border rounded-lg shadow-sm bg-theme-nav">
                             <h3 class="text-2xl font-bold text-theme-primary mb-2">
