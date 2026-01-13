@@ -90,7 +90,7 @@ public void maj() {
 
             <section>
                 <h2 class="text-2xl font-semibold mt-6 mb-2">"Capture d’écran de l’interface"</h2>
-                <img src="/img/gol.png" alt="Interface graphique du Jeu de la Vie" class="rounded-lg border shadow-lg" />
+                <img src="/img/articles/gol-java/gol.png" alt="Interface graphique du Jeu de la Vie" class="rounded-lg border shadow-lg" />
             </section>
 
             <section>

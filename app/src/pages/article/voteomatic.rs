@@ -45,10 +45,10 @@ pub fn VoteOmaticArticlePage() -> impl IntoView {
                     <li>"Tableau de bord pour sessions de vote"</li>
                     <li>"Résultats affichés en graphiques dynamiques"</li>
                     <li>
-                        <img src="/img/interface-vote.png" alt="Interface de vote" class="rounded-lg shadow-md" />
+                        <img src="/img/articles/voteomatic/interface-vote.png" alt="Interface de vote" class="rounded-lg shadow-md" />
                     </li>
                     <li>
-                        <img src="/img/interface-resultat.png" alt="Résultat des votes" class="rounded-lg shadow-md" />
+                        <img src="/img/articles/voteomatic/interface-resultat.png" alt="Résultat des votes" class="rounded-lg shadow-md" />
                     </li>
                 </ul>
             </section>
