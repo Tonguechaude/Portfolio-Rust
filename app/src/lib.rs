@@ -39,7 +39,7 @@ fn DefaultLayout() -> impl IntoView {
             <main class="flex-grow">
                 <Outlet />
             </main>
-            <Copyright year=2025 />
+            <Copyright year=2026 />
         </>
     }
 }
