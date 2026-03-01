@@ -23,6 +23,7 @@ wasm-bindgen = "0.2"
 
 [[workspace.metadata.leptos]]
 name = "portfolio"
+output-name = "portfolio"
 bin-package = "server"
 lib-package = "frontend"
 site-root = "target/site"
