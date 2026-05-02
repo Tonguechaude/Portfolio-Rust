@@ -1,8 +1,8 @@
 use components::copyright::Copyright;
 use components::navbar::Navbar;
-use leptos_router::{components::*, path};
 use leptos::prelude::*;
 use leptos_meta::*;
+use leptos_router::{components::*, path};
 
 // Modules
 mod components;
@@ -14,7 +14,7 @@ mod utils;
 use crate::pages::apprentissage::comptoir::ComptoirPage;
 use crate::pages::apprentissage::sae_reseaux::SaePage;
 use crate::pages::apprentissage::service_desk::TicketingPage;
-use crate::pages::apprentissages::ApprentissagePage;
+// use crate::pages::apprentissages::ApprentissagePage;
 use crate::pages::article::comptoir::ComptoirArticlePage;
 use crate::pages::article::convertisseur_rust::ConvertisseurRustArticlePage;
 use crate::pages::article::ferrumc::FerrumcArticlePage;
@@ -23,11 +23,18 @@ use crate::pages::article::portfolio_rust::PortfolioRustArticlePage;
 use crate::pages::article::rustic::RusticArticlePage;
 use crate::pages::article::voteomatic::VoteOmaticArticlePage;
 use crate::pages::articles::ArticlesPage;
-use crate::pages::contributions::ContributionsPage;
-use crate::pages::not_found::NotFoundPage;
-use crate::pages::projects::ProjectPage;
 use crate::pages::contact::ContactPage;
+use crate::pages::contributions::ContributionsPage;
 use crate::pages::home::HomePage;
+use crate::pages::not_found::NotFoundPage;
+use crate::pages::portfolio::administrer::PortfolioAdministrerPage;
+use crate::pages::portfolio::collaborer::PortfolioCollaborerPage;
+use crate::pages::portfolio::conduire::PortfolioConduirePage;
+use crate::pages::portfolio::gerer::PortfolioGererPage;
+use crate::pages::portfolio::index::PortfolioIndexPage;
+use crate::pages::portfolio::optimiser::PortfolioOptimiserPage;
+use crate::pages::portfolio::realiser::PortfolioRealiserPage;
+use crate::pages::projects::ProjectPage;
 
 // An app router which renders the homepage and handles 404's
 
@@ -86,7 +93,14 @@ pub fn App() -> impl IntoView {
                         <Route path=path!("/articles") view=ArticlesPage />
                         <Route path=path!("/apprentissages/sae") view=SaePage />
                         <Route path=path!("/contributions") view=ContributionsPage />
-                        <Route path=path!("/apprentissages") view=ApprentissagePage />
+                        // <Route path=path!("/apprentissages") view=ApprentissagePage />
+                        <Route path=path!("/portfolio") view=PortfolioIndexPage />
+                        <Route path=path!("/portfolio/realiser") view=PortfolioRealiserPage />
+                        <Route path=path!("/portfolio/optimiser") view=PortfolioOptimiserPage />
+                        <Route path=path!("/portfolio/administrer") view=PortfolioAdministrerPage />
+                        <Route path=path!("/portfolio/gerer") view=PortfolioGererPage />
+                        <Route path=path!("/portfolio/conduire") view=PortfolioConduirePage />
+                        <Route path=path!("/portfolio/collaborer") view=PortfolioCollaborerPage />
                         <Route path=path!("/apprentissages/comptoir") view=ComptoirPage />
                         <Route path=path!("/articles/gol_java") view=GolJavaArticlePage />
                         <Route path=path!("/articles/comptoir") view=ComptoirArticlePage />

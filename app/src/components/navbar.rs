@@ -17,7 +17,7 @@ pub fn Navbar() -> impl IntoView {
                         <li><a href="/" class="hover:text-theme-accent transition">Accueil</a></li>
                         <li><a href="/projects" class="hover:text-theme-accent transition">Projets</a></li>
                         <li><a href="/articles" class="hover:text-theme-accent transition">Articles</a></li>
-                        <li><a href="/apprentissages" class="hover:text-theme-accent transition">Apprentissages</a></li>
+                        <li><a href="/portfolio" class="hover:text-theme-accent transition">Apprentissages</a></li>
                         <li><a href="/contributions" class="hover:text-theme-accent transition">Contributions au libre</a></li>
                         <li><a href="/contact" class="hover:text-theme-accent transition">Contact</a></li>
                     </ul>

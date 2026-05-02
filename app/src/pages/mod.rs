@@ -6,4 +6,5 @@ pub mod contact;
 pub mod contributions;
 pub mod home;
 pub mod not_found;
+pub mod portfolio;
 pub mod projects;
